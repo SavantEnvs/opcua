@@ -1,0 +1,6 @@
+project: savantenvs/opcua
+target: fuzz-deserialize
+
+cmds:
+  - cmd: /mayhem/fuzz_deserialize
+    libfuzzer: true

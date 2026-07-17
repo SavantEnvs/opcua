@@ -1,0 +1,6 @@
+project: savantenvs/opcua
+target: fuzz-comms
+
+cmds:
+  - cmd: /mayhem/fuzz_comms
+    libfuzzer: true
