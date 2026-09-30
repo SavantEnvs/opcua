@@ -1,0 +1,7 @@
+project: savantenvs/opcua
+target: fuzz-deserialize-buggy-mhh-run-2
+# origin: https://app.mayhem.security/mayhemheroes/opcua/fuzz-deserialize/2
+
+cmds:
+  - cmd: /mayhem/fuzz_deserialize
+    libfuzzer: true

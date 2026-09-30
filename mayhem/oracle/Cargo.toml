@@ -1,0 +1,20 @@
+[package]
+name = "opcua-oracle"
+version = "0.0.0"
+authors = ["Automatically generated"]
+publish = false
+edition = "2018"
+
+[dependencies.opcua]
+path = "../../lib"
+default-features = false
+
+# Prevent this from interfering with the upstream workspace
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "oracle"
+path = "src/main.rs"
+test = false
+doc = false

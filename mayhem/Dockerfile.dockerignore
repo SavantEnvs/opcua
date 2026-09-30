@@ -1,0 +1,18 @@
+# BuildKit .dockerignore for the commit-image build (-f mayhem/Dockerfile).
+# BuildKit prefers <dockerfile>.dockerignore over the context-root .dockerignore, so this
+# ADDITIVE override replaces upstream's root .dockerignore (which drops .git/ and .github/)
+# for our build only, WITHOUT modifying any upstream file. The commit image must bake the
+# FULL repo incl. .git (the grader/PATCH tier reads history), so we keep .git and .github.
+
+# Local build artifacts only.
+**/target/
+*.o
+*.a
+*.so
+*.dylib
+**/__pycache__/
+
+# Editor / OS noise.
+.DS_Store
+*.swp
+*~
